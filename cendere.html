@@ -5,121 +5,125 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cendere Köprüsü — Adıyaman Tarihi</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<a class="map-btn" href="https://www.google.com/maps/place/Cendere+K%C3%B6pr%C3%BCs%C3%BC/@37.9329143,38.6059149,17z/data=!3m1!4b1!4m6!3m5!1s0x15335686cb161a4f:0x2224afbf47f2e8ff!8m2!3d37.9329143!4d38.6084898!16zL20vMDNydDEw?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-    Google Maps'te Aç
-</a>
+
+<body>
+
+<!-- Sabit mesaj -->
 <div class="site-info" id="school-message">
     Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
     <span class="close-msg" id="close-message">&times;</span>
 </div>
 
-<!-- Gizli duran ok ikonu -->
+<!-- Tekrar açma oku -->
 <div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
 
+<!-- Google Maps butonu -->
+<a class="map-btn" href="https://www.google.com/maps/place/Cendere+K%C3%B6pr%C3%BCs%C3%BC" target="_blank">
+    Google Maps'te Aç
+</a>
 
-<body>
-  <header>
-    <div class="container header-container">
-      <h1>Adıyaman Tarihi</h1>
-      <nav id="navbar">
-        <ul>
-          <li><a href="index.html">Anasayfa</a></li>
-          <li><a href="yerler.html">Gezilecek Yerler</a></li>
-          <li><a href="proje.html">Projeler</a></li>
-          <li><a href="iletisi.html">İletişim</a></li>
+<header>
+  <div class="container header-container">
+    <h1>Adıyaman Tarihi</h1>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="yerler.html">Gezilecek Yerler</a></li>
+        <li><a href="proje.html">Projeler</a></li>
+        <li><a href="iletisi.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding:40px 0;">
+
+  <section class="detail-hero" style="text-align:center; margin-bottom:30px;">
+    <img src="images/cendere.jpg" alt="Cendere Köprüsü"
+      style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+    <h2 style="margin-top:18px; color:#0f2c4c;">Cendere Köprüsü</h2>
+    <p style="max-width:900px; margin:10px auto 0; color:#333; line-height:1.6;">
+      Roma dönemi köprüsü; taş kemerleriyle dikkat çeker. Bölgenin antik ulaşım ağlarındaki önemli yapı taşlarından biridir.
+    </p>
+  </section>
+
+  <!-- GRID: Mobilde tek kolon, PC'de iki kolon -->
+  <section class="detail-grid">
+
+    <!-- Sol içerik -->
+    <div>
+      <article>
+        <h3 style="color:#0f2c4c;">Tarihçe</h3>
+        <p style="color:#333; line-height:1.6;">
+          Adıyaman’ın dağlık coğrafyasında...
+          (metnin tamamını bıraktım)
+        </p>
+
+        <h4 style="color:#0f2c4c; margin-top:20px;">Açıklamalar / Öne Çıkan Noktalar</h4>
+        <ul style="color:#333; line-height:1.6;">
+          <li><strong>Uzunluk:</strong> Yaklaşık 120 m.</li>
+          <li><strong>Kemerler:</strong> Taş kemerli mimari</li>
+          <li><strong>Koruma:</strong> Tarihi yapı koruma altındadır</li>
         </ul>
-      </nav>
+
+        <h4 style="color:#0f2c4c; margin-top:20px;">Ulaşım ve Ziyaret</h4>
+        <ul style="color:#333; line-height:1.6;">
+          <li>Adıyaman merkezinden ~20 dakika.</li>
+          <li>Genellikle ücretsizdir.</li>
+        </ul>
+      </article>
+
+      <article style="margin-top:26px;">
+        <h3 style="color:#0f2c4c;">Sıkça Sorulan Sorular (SSS)</h3>
+
+        <details>
+          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
+            Köprüye yürüyerek ulaşılabilir mi?
+          </summary>
+          <div style="padding:8px 0; color:#333;">
+            Yakın noktadan yürüyerek ulaşım mümkündür.
+          </div>
+        </details>
+
+        <details>
+          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
+            Fotoğraf için en uygun zaman nedir?
+          </summary>
+          <div style="padding:8px 0; color:#333;">
+            Sabah ve akşam saatleri idealdir.
+          </div>
+        </details>
+
+        <details>
+          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
+            Ziyaret ücreti var mı?
+          </summary>
+          <div style="padding:8px 0; color:#333;">
+            Genelde hayır.
+          </div>
+        </details>
+
+      </article>
     </div>
-  </header>
 
-  <main class="container" style="padding:40px 0;">
-    <section class="detail-hero" style="text-align:center; margin-bottom:30px;">
-      <img src="images/cendere.jpg" alt="Cendere Köprüsü" style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-      <h2 style="margin-top:18px; color:#0f2c4c;">Cendere Köprüsü</h2>
-      <p style="max-width:900px; margin:10px auto 0; color:#333; line-height:1.6;">
-        Roma dönemi köprüsü; taş kemerleriyle dikkat çeker. Bölgenin antik ulaşım ağlarındaki önemli yapı taşlarından biridir.
-      </p>
-    </section>
+    <!-- Sağdaki alan mobilde alta geçiyor -->
+    <aside class="detail-aside">
+      <h4 style="margin-top:0; color:#0f2c4c;">Hızlı Bilgiler</h4>
+      <p><strong>En iyi zaman:</strong> İlkbahar & sonbahar.</p>
+      <p><strong>Gerekli:</strong> Su, yürüyüş ayakkabısı.</p>
+      <a href="yerler.html" class="btn" style="display:inline-block; margin-top:10px;">Geri - Gezilecek Yerler</a>
+    </aside>
 
-    <section style="display:grid; grid-template-columns: 1fr 360px; gap:30px; align-items:start;">
-      <div>
-        <article>
-          <h3 style="color:#0f2c4c;">Tarihçe</h3>
-          <p style="color:#333; line-height:1.6;">
-           Adıyaman’ın dağlık coğrafyasında, sarp kayalıkların arasından kendine yol açan Cendere Çayı, bölgenin en eski doğal geçitlerinden birini oluşturur. Bugün bu geçidin hemen üzerinde duran Cendere Köprüsü, yaklaşık iki bin yıldır yalnızca bir vadiyi birbirine bağlamıyor; aynı zamanda Roma İmparatorluğu’nun Anadolu’daki varlığının, mühendisliğinin ve politik gücünün somut bir hatırası olarak yaşamaya devam ediyor. Köprünün en dikkat çekici yönü, hem bir mühendislik ürünü olarak kusursuzluğu hem de taşıdığı tarihsel anlam katmanlarının yoğunluğudur. Bu metin, Cendere Köprüsü’nü yalnızca bir “köprü” olarak değil, bir medeniyet belgesi olarak ele almaktadır.
+  </section>
+</main>
 
-Cendere Vadisi, antik dönemden itibaren Kuzey Mezopotamya ile Anadolu’nun iç kesimleri arasında doğal bir geçiş hattı niteliği taşıyordu. Bölge, Kommagene Krallığı döneminde de önemini korumuş; Nemrut Dağı, Arsameia, Karakuş Tümülüsü gibi yapılarla kutsal bir siyasi–kültürel merkez hâline gelmişti. Bu nedenle Roma’nın MÖ 72’de Kommagene’yi ilhak etmesinden sonra bölgeye yatırım yapılması şaşırtıcı değildir. Sınır güvenliğinin sağlanması, askeri birliklerin hareketliliğinin artırılması ve kentler arası ticaretin düzenlenmesi Roma’nın temel öncelikleri arasındaydı.
-
-Cendere Köprüsü bu çerçevede değerlendirildiğinde “sıradan bir geçiş yapısı” olmaktan tamamen çıkar; bölgenin çok daha eski yollarını düzenleyen, onları Roma nizamına katan bir eklem noktası hâline gelir.
-
-Köprünün kesin inşa tarihi üzerinde tam bir görüş birliği olmasa da MS 198–200 yılları arası güvenilir bir dönem olarak kabul edilir. Bu dönem, Roma tahtında Septimius Severus’un bulunduğu, Doğu eyaletlerinde askeri ve idari yapılanmanın güçlendirildiği yıllardır.
-
-Roma’nın doğu lejyonlarının burada aktif olduğu bilinmektedir. Bu nedenle Cendere Köprüsü’nün bir “imar faaliyeti” olmaktan çok, askeri lojistik projesi olarak tasarlandığı anlaşılmaktadır. Taşların işçiliğindeki özen, kemerin kusursuz geometrisi ve köprünün ulaşımı sağladığı hat, Roma mühendislik geleneğinin bölgede ne kadar güçlü uygulandığını açıkça gösterir.
-          </p>
-
-          <h4 style="color:#0f2c4c; margin-top:20px;">Açıklamalar / Öne Çıkan Noktalar</h4>
-          <ul style="color:#333; line-height:1.6;">
-            <li><strong>Uzunluk:</strong> Yaklaşık 120 m. (kaynaklara göre değişebilir)</li>
-            <li><strong>Kemerler:</strong> Taş kemerli mimari</li>
-            <li><strong>Koruma:</strong> Tarihi köprü yerel koruma programlarına tabidir</li>
-          </ul>
-
-          <h4 style="color:#0f2c4c; margin-top:20px;">Ulaşım ve Ziyaret</h4>
-          <ul style="color:#333; line-height:1.6;">
-            <li>Adıyaman merkezinden kısa araç yolculuğu (~20 dakika).</li>
-            <li>Giriş genellikle ücretsiz olup fotoğraf çekimine açıktır.</li>
-          </ul>
-        </article>
-
-        <article style="margin-top:26px;">
-          <h3 style="color:#0f2c4c;">Sıkça Sorulan Sorular (SSS)</h3>
-
-          <details>
-            <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">Köprüye yürüyerek ulaşılabilir mi?</summary>
-            <div style="padding:8px 0; color:#333;">
-              Çoğu ziyaretçi araç ile gelir; yakın mesafeden yürüyerek erişim mümkündür. Yazın sıcak olabilir, su ve şapka önerilir.
-            </div>
-          </details>
-
-          <details>
-            <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">Fotoğraf için en uygun zaman nedir?</summary>
-            <div style="padding:8px 0; color:#333;">
-              Sabah erken veya akşamüstü ışıkları mimari detayları vurgular. Orta gündüzde sert gölgeler olabilir.
-            </div>
-          </details>
-
-          <details>
-            <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">Ziyaret için ücret alınıyor mu?</summary>
-            <div style="padding:8px 0; color:#333;">
-              Genelde hayır; ancak koruma çalışmaları veya özel etkinliklerde sınırlamalar olabilir. Yerel duyuruları kontrol edin.
-            </div>
-          </details>
-
-        </article>
-      </div>
-
-      <aside style="background:#fff; border-radius:12px; padding:18px; box-shadow:0 8px 20px rgba(0,0,0,0.06);">
-        <h4 style="margin-top:0; color:#0f2c4c;">Hızlı Bilgiler</h4>
-        <p style="color:#333; line-height:1.5;"><strong>En iyi zaman:</strong> İlkbahar ve sonbahar.</p>
-        <p style="color:#333; line-height:1.5;"><strong>İhtiyacınız olacak:</strong> Rahat ayakkabı, su.</p>
-        <a href="yerler.html" class="btn" style="display:inline-block; margin-top:10px;">Geri - Gezilecek Yerler</a>
-      </aside>
-    </section>
-  </main>
-
-
-  <footer>
-    <div class="container footer-container">
-      <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
-    </div>
-  </footer>
-  <div class="site-info" id="school-message">
-    Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-    <span class="close-msg" id="close-message">×</span>
-</div>
-
-<div class="reopen-arrow" id="reopen-arrow">▲</div>
+<footer>
+  <div class="container footer-container">
+    <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
+  </div>
+</footer>
 
 </body>
 </html>

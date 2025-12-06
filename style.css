@@ -335,3 +335,75 @@ align-items: center;
     opacity: 0.6;
     z-index: 99999;
 }
+/* --------------------------- */
+/* MOBİL DÜZENLEMELER - GENEL */
+/* --------------------------- */
+@media (max-width: 768px) {
+
+    /* Başlık ve menü */
+    header .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 12px 0;
+        display: block;
+        width: 100%;
+    }
+
+    /* Hero alanı */
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Kartlar */
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Ok-kapat butonları */
+    .site-info {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .reopen-arrow {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://serdor.github.io/kaltarih.github.io/sitemap.xml

@@ -465,6 +465,19 @@ ul, li {
         display: block !important;
     }
 }
+/* Mobilde detay sayfası sütunlarını tek kolona çevir */
+@media (max-width: 768px) {
+    .detail-grid,
+    main section[style*="grid-template-columns"] {
+        display: block !important;
+    }
+
+    aside {
+        margin-top: 25px !important;
+        width: 100% !important;
+    }
+}
+
 
 
 

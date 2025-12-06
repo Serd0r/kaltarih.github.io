@@ -2,124 +2,129 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nemrut Dağı — Adıyaman Tarihi</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<a class="map-btn" href="https://www.google.com/maps/place/Nemrut+Da%C4%9F%C4%B1/@37.9806725,38.7395966,18z/data=!3m1!4b1!4m6!3m5!1s0x4075ff1780b7aec9:0x31abab7733e1fa45!8m2!3d37.9807788!4d38.7407995!16s%2Fm%2F0v0j6bx?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D target="_blank">
-    Google Maps'te Aç
-</a>
-<div class="site-info" id="school-message">
-    Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-    <span class="close-msg" id="close-message">&times;</span>
-</div>
-
-<!-- Gizli duran ok ikonu -->
-<div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
 
 <body>
-  <header>
-    <div class="container header-container">
-      <h1>Adıyaman Tarihi</h1>
-      <nav id="navbar">
-        <ul>
-          <li><a href="index.html">Anasayfa</a></li>
-          <li><a href="yerler.html">Gezilecek Yerler</a></li>
-          <li><a href="proje.html">Projeler</a></li>
-          <li><a href="iletisi.html">İletişim</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container" style="padding:40px 0;">
-    <section class="detail-hero" style="text-align:center; margin-bottom:30px;">
-      <img src="images/nemrut.jpg" alt="Nemrut Dağı" style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-      <h2 style="margin-top:18px; color:#0f2c4c;">Nemrut Dağı</h2>
-      <p style="max-width:900px; margin:10px auto 0; color:#333; line-height:1.6;">
-        Kommagene Krallığı’nın anıtsal mezar kompleksi; devasa heykeller, kral tapınakları ve gün doğumu manzaraları ile ünlü UNESCO Dünya Mirası alanı.
-      </p>
-    </section>
-
-    <section style="display:grid; grid-template-columns: 1fr 360px; gap:30px; align-items:start;">
-      <!-- Ana içerik -->
-      <div>
-        <article>
-          <h3 style="color:#0f2c4c;">Tarihçe</h3>
-          <p style="color:#333; line-height:1.6;">
-           Adıyaman’ın doğusundaki sarp zirveler arasında yükselen Nemrut Dağı, yalnızca bir kutsal alan değil; Kommagene Krallığı’nın kültürel mirasını, siyasi iddiasını ve Doğu–Batı sentezini taşa işleyen bir anıt niteliğindedir. Bugün dev heykelleriyle tanınan bu dağ, I. Antiochos Theos’un kendi soyunu yüceltme ve krallığını ölümsüzleştirme arzusunun en somut ifadesi olarak ayakta durur.
-
-Kommagene, Fırat geçitleri ile Anadolu içlerinin kesiştiği noktadaki konumu sayesinde antik dünyanın önemli bir tampon bölgesiydi. Antiochos, hem Pers hem Makedon kökenli olduğunu iddia ederek krallığını iki büyük kültürün birleşim noktası olarak tanımlamış; bu ideolojiyi de Nemrut’un zirvesine kurduğu anıtsal düzenle ilan etmiştir. Doğu ve Batı teraslarında yan yana dizili tanrı heykelleri, bu hibrit kimliğin taşlaşmış birer sembolüdür.
-
-MÖ 1. yüzyıl ortalarında inşa edilen kutsal alan, Kommagene Krallığı’nın Roma ve Part güçleri arasında sıkıştığı dönemde hem bir kült merkezi hem de bir siyasi güç gösterisi niteliği taşır. Tümülüs, teraslar ve dev heykeller, yalnızca bir mezar kompleksinin parçaları değil; krallığın kozmik düzen anlayışını ve hükümdarın ilahi statüsünü yansıtan birer manifestodur.
-
-Bugün Nemrut Dağı, Kommagene’nin tarih sahnesinden çekilmesine rağmen, taşlara kazınmış bu iddiayı hâlâ taşır. Bu nedenle Nemrut, bir dağdan çok, bir medeniyetin hafızasını saklayan sessiz bir belgedir.
-
-          <h4 style="color:#0f2c4c; margin-top:20px;">Açıklamalar / Öne Çıkan Noktalar</h4>
-          <ul style="color:#333; line-height:1.6;">
-            <li><strong>Rakım:</strong> Yaklaşık 2.150 m.</li>
-            <li><strong>Heykeller:</strong> Kral ve tanrılara ait dev taş başlar ve oturan figürler.</li>
-            <li><strong>Görünürlük:</strong> Özellikle gün doğumu ve gün batımı dönemleri fotoğraf açısından eşsiz.</li>
-            <li><strong>Koruma:</strong> Arkeolojik çalışmalar devam ediyor; bazı eserler açık hava koruması altında.</li>
-          </ul>
-
-          <h4 style="color:#0f2c4c; margin-top:20px;">Pratik Bilgiler</h4>
-          <ul style="color:#333; line-height:1.6;">
-            <li>Adıyaman merkezden araçla ~1–1.5 saat sürer (yol ve hava koşullarına göre değişir).</li>
-            <li>Ziyaretçi saatleri ve giriş ücretlerini ziyaret öncesi kontrol edin (sezonluk değişiklik olabilir).</li>
-            <li>Hava soğuk olabilir—özellikle sabah erken saatlerde rüzgâr ve soğuk için kalın giyin.</li>
-          </ul>
-        </article>
-
-        <article style="margin-top:26px;">
-          <h3 style="color:#0f2c4c;">Sıkça Sorulan Sorular (SSS)</h3>
-
-          <details>
-            <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">Nemrut’a en kolay nasıl ulaşırım?</summary>
-            <div style="padding:8px 0; color:#333;">
-              Genelde Adıyaman ya da Kahta merkezlerinden tur veya özel araçla ulaşım sağlar. Yolun son kısmı kırsal ve dönemeçlidir; deneyimli sürücü ve uygun araç tercih edilir.
-            </div>
-          </details>
-
-          <details>
-            <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">Gün doğumu için ne zaman gelmeliyim?</summary>
-            <div style="padding:8px 0; color:#333;">
-              Mevsime göre saat değişir; yazın erken, kışın daha geç. Hedefiniz gün doğumu ise en az 30–45 dakika erken varış planlayın (yürüyüş süresi hesaba katılmalı).
-            </div>
-          </details>
-
-          <details>
-            <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">Rehber bulabilir miyim?</summary>
-            <div style="padding:8px 0; color:#333;">
-              Evet; Kahta ve Adıyaman’da yerel rehber hizmetleri var. Arkeolojik ve tarihsel detayları rehberle daha iyi öğrenirsiniz.
-            </div>
-          </details>
-
-        </article>
-      </div>
-
-      <!-- Sağ sütun: hızlı bilgiler -->
-      <aside style="background:#fff; border-radius:12px; padding:18px; box-shadow:0 8px 20px rgba(0,0,0,0.06);">
-        <h4 style="margin-top:0; color:#0f2c4c;">Hızlı Bilgiler</h4>
-        <p style="color:#333; line-height:1.5;"><strong>En iyi zaman:</strong> İlkbahar ve sonbahar; fotoğrafçılar için gün doğumu.</p>
-        <p style="color:#333; line-height:1.5;"><strong>İhtiyacınız olacak:</strong> Rahat yürüyüş ayakkabısı, su, güneş/sıcaklık için giysi.</p>
-        <p style="color:#333; line-height:1.5;"><strong>Giriş:</strong> Ücretli (mevsime göre değişir).</p>
-        <a href="yerler.html" class="btn" style="display:inline-block; margin-top:10px;">Geri - Gezilecek Yerler</a>
-      </aside>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-container">
-      <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
-    </div>
-  </footer>
-  <div class="site-info" id="school-message">
-    Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-    <span class="close-msg" id="close-message">×</span>
+<!-- Sabit bilgi kutusu -->
+<div class="site-info" id="school-message">
+  Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
+  <span class="close-msg" id="close-message">&times;</span>
 </div>
 
-<div class="reopen-arrow" id="reopen-arrow">▲</div>
+<!-- Aç/Kapat oku -->
+<div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
+
+<!-- Google Maps butonu -->
+<a class="map-btn" href="https://www.google.com/maps/place/Nemrut+Da%C4%9F%C4%B1" target="_blank">
+  Google Maps'te Aç
+</a>
+
+<header>
+  <div class="container header-container">
+    <h1>Adıyaman Tarihi</h1>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="yerler.html">Gezilecek Yerler</a></li>
+        <li><a href="proje.html">Projeler</a></li>
+        <li><a href="iletisi.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding:40px 0;">
+
+  <section class="detail-hero" style="text-align:center; margin-bottom:30px;">
+    <img src="images/nemrut.jpg" alt="Nemrut Dağı"
+      style="width:100%; max-height:420px; object-fit:cover; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+    <h2 style="margin-top:18px; color:#0f2c4c;">Nemrut Dağı</h2>
+    <p style="max-width:900px; margin:10px auto 0; color:#333; line-height:1.6;">
+      Kommagene Krallığı’nın anıtsal mezar kompleksi; dev heykeller, kral tapınakları ve eşsiz gün doğumu manzaraları ile UNESCO Dünya Mirası alanı.
+    </p>
+  </section>
+
+  <section style="display:grid; grid-template-columns: 1fr 360px; gap:30px; align-items:start;">
+
+    <!-- Sol içerik -->
+    <div>
+      <article>
+        <h3 style="color:#0f2c4c;">Tarihçe</h3>
+        <p style="color:#333; line-height:1.6;">
+          Adıyaman’ın doğusundaki sarp zirveler arasında yükselen Nemrut Dağı...
+        </p>
+
+        <h4 style="color:#0f2c4c; margin-top:20px;">Açıklamalar / Öne Çıkan Noktalar</h4>
+        <ul style="color:#333; line-height:1.6;">
+          <li><strong>Rakım:</strong> 2.150 m.</li>
+          <li><strong>Heykeller:</strong> Kral ve tanrılara ait dev taş başlar.</li>
+          <li><strong>Görünürlük:</strong> En iyi gün doğumu.</li>
+          <li><strong>Koruma:</strong> Arkeolojik koruma devam ediyor.</li>
+        </ul>
+
+        <h4 style="color:#0f2c4c; margin-top:20px;">Pratik Bilgiler</h4>
+        <ul style="color:#333; line-height:1.6%;">
+          <li>Kahta’dan araçla ~1 saat.</li>
+          <li>Giriş saatlerini kontrol edin.</li>
+          <li>Sabah çok soğuk olabilir — kalın giyinin.</li>
+        </ul>
+      </article>
+
+      <article style="margin-top:26px;">
+        <h3 style="color:#0f2c4c;">Sıkça Sorulan Sorular (SSS)</h3>
+
+        <details>
+          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
+            Nemrut’a en kolay nasıl ulaşırım?
+          </summary>
+          <div style="padding:8px 0; color:#333;">
+            Adıyaman veya Kahta’dan araç/tur ile ulaşım mümkündür.
+          </div>
+        </details>
+
+        <details>
+          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
+            Gün doğumu için ne zaman gitmeliyim?
+          </summary>
+          <div style="padding:8px 0; color:#333;">
+            En az 30–45 dakika erken varılmalı.
+          </div>
+        </details>
+
+        <details>
+          <summary style="cursor:pointer; padding:10px 0; font-weight:600; color:#0f2c4c;">
+            Rehber bulabilir miyim?
+          </summary>
+          <div style="padding:8px 0; color:#333;">
+            Evet, yerel rehberler mevcut.
+          </div>
+        </details>
+
+      </article>
+    </div>
+
+    <!-- Sağ sütun -->
+    <aside style="background:#fff; border-radius:12px; padding:18px; box-shadow:0 8px 20px rgba(0,0,0,0.06);">
+      <h4 style="margin-top:0; color:#0f2c4c;">Hızlı Bilgiler</h4>
+      <p><strong>En iyi zaman:</strong> İlkbahar & sonbahar.</p>
+      <p><strong>İhtiyaç:</strong> Su, yürüyüş ayakkabısı.</p>
+      <p><strong>Giriş:</strong> Ücretli.</p>
+      <a href="yerler.html" class="btn" style="display:inline-block; margin-top:10px;">Geri - Gezilecek Yerler</a>
+    </aside>
+
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-container">
+    <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
+  </div>
+</footer>
 
 </body>
 </html>

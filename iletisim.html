@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Adıyaman Tarihi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        /* İletişim sayfası için mini stiller */
+        .contact {
+            padding: 40px 20px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0f2c4c;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+        }
+
+        .contact button {
+            padding: 12px;
+            font-size: 1.1em;
+            background-color: #f78c42;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #e06f1a;
+        }
+
+        /* Alt mesaj */
+        .info {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Sabit okul mesajı */
+        .site-info {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(15,44,76,0.9);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: opacity 0.4s, transform 0.4s;
+        }
+
+        .close-msg {
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .reopen-arrow {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.8em;
+            background: #0f2c4c;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: none;
+            z-index: 9999;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Sabit okul mesajı -->
+    <div class="site-info" id="school-message">
+        Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
+        <span class="close-msg" id="close-message">×</span>
+    </div>
+
+    <!-- Yeniden açma oku -->
+    <div class="reopen-arrow" id="reopen-arrow">▲</div>
+
+    <header>
+        <div class="container header-container">
+            <h1>Adıyaman Tarihi</h1>
+            <button class="menu-toggle" id="mobile-menu">&#9776;</button>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="iletisi.html" class="active">İletişim</a></li>
+                    <li><a href="proje.html">Projeler</a></li>
+                    <li><a href="yerler.html">Gezilecek Yerler</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- İletişim Formu -->
+    <section class="contact container">
+        <h2>İletişim</h2>
+        <p style="text-align:center">Aşağıdaki form üzerinden bize mesaj gönderebilirsiniz.</p>
+
+        <!-- ÇALIŞAN FORM! BURASI ÖNEMLİ -->
+        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+            <!-- BURAYA KENDİ KEY’İNİ YAZ -->
+            <input type="hidden" name="access_key" value="670b8b87-4ae7-4744-b7cb-8c970ad49124">
+
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" required placeholder="Adınız">
+
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required placeholder="E-posta adresiniz">
+
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" required placeholder="Mesajınızı yazın..." rows="5"></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+
+        <p class="info">Alternatif olarak e-posta gönderebilirsiniz:  
+            <a href="mailto:kaltarihproje@gmail.com">kaltarihproje@gmail.com</a>
+        </p>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+
+    <!-- Mesaj aç/kapa script -->
+    <script>
+        const msg = document.getElementById("school-message");
+        const closeBtn = document.getElementById("close-message");
+        const reopen = document.getElementById("reopen-arrow");
+
+        closeBtn.addEventListener("click", () => {
+            msg.style.opacity = "0";
+            msg.style.transform = "scale(0.7)";
+            setTimeout(() => {
+                msg.style.display = "none";
+                reopen.style.display = "block";
+            }, 300);
+        });
+
+        reopen.addEventListener("click", () => {
+            reopen.style.display = "none";
+            msg.style.display = "flex";
+            setTimeout(() => {
+                msg.style.opacity = "1";
+                msg.style.transform = "scale(1)";
+            }, 50);
+        });
+    </script>
+
+</body>
+</html>

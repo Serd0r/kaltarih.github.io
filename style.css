@@ -26,9 +26,6 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 .logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
 
 /* NAV */
-.main-nav ul { list-style:none; display:flex; gap:16px; margin:0; padding:0; align-items:center; }
-.main-nav a { color:var(--white); text-decoration:none; padding:8px 6px; font-weight:600; }
-.main-nav a.active, .main-nav a:hover { color:var(--orange); }
 .main-nav a {
   color: var(--white);
   text-decoration: none;
@@ -124,5 +121,6 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
   .card{ width:100%; }
   .reopen-arrow{ display:block; }
 }
+
 
 

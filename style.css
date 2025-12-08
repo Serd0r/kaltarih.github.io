@@ -29,6 +29,21 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 .main-nav ul { list-style:none; display:flex; gap:16px; margin:0; padding:0; align-items:center; }
 .main-nav a { color:var(--white); text-decoration:none; padding:8px 6px; font-weight:600; }
 .main-nav a.active, .main-nav a:hover { color:var(--orange); }
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255,255,255,0.12);
+  color: var(--orange);
+}
+
 
 /* Mobile toggle */
 .mobile-toggle { display:none; background:none; border:none; color:var(--white); font-size:1.5rem; }
@@ -109,4 +124,5 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
   .card{ width:100%; }
   .reopen-arrow{ display:block; }
 }
+
 

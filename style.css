@@ -26,39 +26,75 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 .logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
 
 /* NAVBAR GENEL */
-nav {
-    background: #0f2c4c;
-    padding: 12px 0;
-    border-radius: 8px;
-    margin-top: 10px;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
-/* Listeyi yatay yap */
+.menu-toggle {
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #0f2c4c;
+    cursor: pointer;
+    display: none; /* Masaüstünde görünmez */
+}
+
+/* NAV */
 nav ul {
-    list-style: none;
     display: flex;
     gap: 15px;
-    justify-content: center;
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
-/* Görünümü butonlaştır */
 nav ul li a {
     color: white;
-    text-decoration: none;
+    background: #0f2c4c;
     padding: 10px 16px;
-    background: rgba(255,255,255,0.10);
     border-radius: 8px;
+    text-decoration: none;
     font-weight: 600;
-    transition: 0.25s ease;
+    transition: 0.2s;
 }
 
-/* Hover efekti */
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover {
     background: #f78c42;
-    color: #fff;
+}
+
+/* ------------ MOBİL DÜZEN ------------ */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block; /* Mobilde görünsün */
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: #0f2c4c;
+        padding: 15px 0;
+        display: none; /* Mobilde gizli */
+    }
+
+    nav.active ul {
+        display: flex; /* Menü tuşuna basınca açılır */
+    }
+
+    nav ul li a {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
 }
 
 
@@ -141,6 +177,7 @@ nav ul li a.active {
   .card{ width:100%; }
   .reopen-arrow{ display:block; }
 }
+
 
 
 

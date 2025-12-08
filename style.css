@@ -1,288 +1,112 @@
-/* ----------------------------- */
-/* GENEL AYARLAR */
-/* ----------------------------- */
-
-* {
-  box-sizing: border-box;
-  }
-
-html, body {
-margin: 0;
-padding: 0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: #f4f7fa;
-color: #1c1c1c; /* Genel metin rengi */
-overflow-x: hidden;
-width: 100%;
+/* ----------------------------
+   TEMEL DEĞİŞKENLER + RESET
+   ---------------------------- */
+:root{
+  --navy: #0f2c4c;
+  --orange: #f78c42;
+  --white: #ffffff;
+  --muted: #6b7280;
+  --bg: #f4f7fa;
+  --card-shadow: 0 10px 30px rgba(15,44,76,0.08);
+  --radius: 12px;
+  --container: 1200px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-color: #0f2c4c; /* Başlık rengi */
-margin: 0 0 15px 0;
+* { box-sizing: border-box; }
+html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:var(--bg); color:#1c1c1c; }
+.container { width:90%; max-width:var(--container); margin:0 auto; }
+
+/* ----------------------------
+   HEADER
+   ---------------------------- */
+.site-header { background:var(--navy); color:var(--white); position:sticky; top:0; z-index:50; box-shadow: 0 4px 18px rgba(2,6,23,0.06); }
+.header-inner { display:flex; align-items:center; gap:18px; padding:14px 0; justify-content:space-between; }
+.brand { display:flex; align-items:center; gap:12px; }
+.brand .brand-text { font-weight:700; font-size:1.05rem; color:var(--white); text-decoration:none; }
+.logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+
+/* NAV */
+.main-nav ul { list-style:none; display:flex; gap:16px; margin:0; padding:0; align-items:center; }
+.main-nav a { color:var(--white); text-decoration:none; padding:8px 6px; font-weight:600; }
+.main-nav a.active, .main-nav a:hover { color:var(--orange); }
+
+/* Mobile toggle */
+.mobile-toggle { display:none; background:none; border:none; color:var(--white); font-size:1.5rem; }
+
+/* ----------------------------
+   HERO
+   ---------------------------- */
+.hero { padding:36px 0; background: linear-gradient(180deg, rgba(15,44,76,0.06), rgba(247,140,66,0.02)); display:flex; align-items:center; }
+.hero-inner { display:flex; gap:28px; align-items:center; justify-content:space-between; width:100%; }
+.hero-content { max-width:640px; }
+.hero h1 { color:var(--navy); font-size:2.2rem; margin:0 0 10px 0; }
+.hero p { color:var(--muted); font-size:1rem; margin:0 0 18px 0; }
+.hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
+.hero-media img { width:420px; max-width:45vw; border-radius:12px; box-shadow:var(--card-shadow); display:block; }
+
+/* BUTTONLAR */
+.btn { background:var(--orange); color:var(--white); padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:700; display:inline-block; }
+.btn.ghost { background:transparent; border:2px solid rgba(15,44,76,0.08); color:var(--navy); padding:8px 16px; }
+.btn.small{ padding:8px 12px; border-radius:8px; font-size:0.95rem; }
+
+/* ----------------------------
+   MAIN GRID
+   ---------------------------- */
+.main-grid { display:grid; grid-template-columns: 1fr 320px; gap:28px; padding:28px 0; align-items:start; }
+
+/* CARDS */
+.cards { display:flex; gap:20px; flex-wrap:wrap; }
+.card { background:var(--white); border-radius:12px; box-shadow:var(--card-shadow); overflow:hidden; width:320px; display:flex; flex-direction:column; }
+.card img{ width:100%; height:180px; object-fit:cover; display:block; }
+.card-body{ padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }
+.card h3{ margin:0; color:var(--navy); }
+.card p{ margin:0; color:var(--muted); font-size:0.95rem; }
+.card-actions { margin-top:auto; display:flex; gap:8px; }
+
+/* SIDE PANEL */
+.side-panel { display:flex; flex-direction:column; gap:18px; }
+.panel-card { background:var(--white); border-radius:12px; padding:16px; box-shadow:var(--card-shadow); }
+.panel-card h4{ margin:0 0 8px 0; color:var(--navy); }
+.panel-card p{ margin:0; color:var(--muted); }
+
+/* ----------------------------
+   FOOTER
+   ---------------------------- */
+.site-footer { background:var(--navy); color:var(--white); padding:18px 0; margin-top:30px; }
+.footer-inner { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.footer-links a { color:rgba(255,255,255,0.85); text-decoration:none; margin-left:8px; }
+
+/* ----------------------------
+   MAP BTN + SITE INFO
+   ---------------------------- */
+.map-btn { position:fixed; right:18px; bottom:18px; background:#2b74ff; color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700; box-shadow:0 8px 20px rgba(43,116,255,0.14); z-index:120; }
+.site-info { position:fixed; bottom:0; left:0; width:100%; background:rgba(15,44,76,0.95); color:#fff; padding:12px 18px; z-index:119; display:flex; justify-content:center; align-items:center; }
+.site-info-inner { max-width:var(--container); width:90%; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.close-site-info { background:transparent; border:none; color:#fff; font-size:20px; cursor:pointer; }
+
+/* reopen arrow */
+.reopen-arrow { display:none; position:fixed; right:14px; bottom:14px; background:rgba(15,44,76,0.95); color:#fff; border:none; padding:8px 10px; border-radius:8px; z-index:120; }
+
+/* ----------------------------
+   RESPONSIVE
+   ---------------------------- */
+@media (max-width: 980px) {
+  .hero-inner{ flex-direction:column-reverse; align-items:center; gap:18px; }
+  .hero-media img{ max-width:92%; height:auto; }
+  .main-grid{ grid-template-columns: 1fr; }
+  .cards{ justify-content:center; }
+  .site-info-inner{ flex-direction:column; gap:10px; text-align:center; }
 }
 
-p, li {
-color: #1c1c1c; /* Paragraf ve liste metni */
-line-height: 1.7;
-}
-
-a {
-color: #0f2c4c; /* Link rengi */
-text-decoration: none;
-transition: color 0.3s;
-}
-
-a:hover, a.active {
-color: #f78c42;
-}
-
-/* ----------------------------- */
-/* CONTAINER */
-/* ----------------------------- */
-.container {
-width: 90%;
-max-width: 1200px;
-margin: auto;
-}
-
-/* ----------------------------- */
-/* HEADER & NAVBAR */
-/* ----------------------------- */
-header {
-background-color: #0f2c4c;
-color: white;
-padding: 20px 0;
-position: sticky;
-top: 0;
-z-index: 1000;
-}
-
-header h1 {
-text-align: center;
-font-size: 2em;
-}
-
-nav ul {
-list-style: none;
-display: flex;
-justify-content: center;
-padding: 0;
-margin-top: 10px;
-}
-
-nav ul li {
-margin: 0 15px;
-}
-
-nav ul li a {
-color: white;
-font-weight: bold;
-}
-
-.menu-toggle {
-display: none;
-}
-
-/* ----------------------------- */
-/* HERO SEKTÖRÜ */
-/* ----------------------------- */
-.hero {
-background: linear-gradient(rgba(15,44,76,0.6), rgba(15,44,76,0.6)), url('images/nemrut.jpg') center/cover no-repeat;
-color: white;
-text-align: center;
-padding: 150px 20px 100px 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-
-.hero h2 {
-font-size: 3em;
-margin-bottom: 20px;
-}
-
-.hero p {
-font-size: 1.2em;
-max-width: 700px;
-line-height: 1.5;
-margin-bottom: 30px;
-}
-
-/* ----------------------------- */
-/* KARTLAR */
-/* ----------------------------- */
-.cards {
-display: flex;
-gap: 30px;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.card {
-background-color: white;
-border-radius: 15px;
-overflow: hidden;
-width: 300px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-text-align: center;
-transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-transform: translateY(-5px);
-box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-}
-
-.card img {
-width: 100%;
-height: 200px;
-object-fit: cover;
-}
-
-.card h3 {
-color: #0f2c4c;
-margin: 15px 0;
-}
-
-.card p {
-color: #1c1c1c;
-padding: 0 15px 15px 15px;
-}
-
-/* ----------------------------- */
-/* BUTONLAR */
-/* ----------------------------- */
-.btn, .btn-card {
-background-color: #f78c42;
-color: white;
-padding: 10px 25px;
-border-radius: 25px;
-text-decoration: none;
-font-weight: bold;
-transition: background 0.3s;
-}
-
-.btn:hover, .btn-card:hover {
-background-color: #e06f1a;
-}
-
-/* ----------------------------- */
-/* FOOTER */
-/* ----------------------------- */
-footer {
-background-color: #0f2c4c;
-color: white;
-text-align: center;
-padding: 20px 0;
-}
-
-/* ----------------------------- */
-/* MESAJ & OK BUTONLARI */
-/* ----------------------------- */
-.site-info {
-position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
-background: #111;
-color: #fff;
-text-align: center;
-padding: 10px 40px 10px 10px;
-font-size: 14px;
-z-index: 99999;
-backdrop-filter: blur(4px);
-}
-
-.close-msg {
-position: absolute;
-right: 15px;
-top: 50%;
-transform: translateY(-50%);
-font-size: 22px;
-cursor: pointer;
-color: #fff;
-font-weight: bold;
-user-select: none;
-}
-
-.reopen-arrow {
-position: fixed;
-bottom: 10px;
-right: 20px;
-background: #111;
-color: #fff;
-padding: 6px 10px;
-border-radius: 6px;
-cursor: pointer;
-display: none;
-opacity: 0.6;
-z-index: 99999;
-}
-
-/* ----------------------------- */
-/* RESPONSIVE / MOBİL */
-/* ----------------------------- */
 @media (max-width: 768px) {
-
-```
-header .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    display: none;
-}
-
-nav.active ul {
-    display: flex;
-}
-
-.hero {
-    padding: 60px 20px;
-}
-
-.hero h2 {
-    font-size: 28px;
-}
-
-.hero p {
-    font-size: 16px;
-}
-
-.cards {
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-.site-info {
-    font-size: 12px;
-    padding: 8px;
-}
-
-.reopen-arrow {
-    right: 10px;
-    bottom: 10px;
-}
-```
-
+  .mobile-toggle{ display:block; }
+  .main-nav{ display:none; }
+  .main-nav.active{ display:block; position:absolute; left:0; top:64px; right:0; background:var(--navy); padding:12px 0; z-index:60; }
+  .main-nav ul{ flex-direction:column; padding:8px 16px; gap:8px; }
+  .main-nav a{ color:var(--white); display:block; padding:12px 8px; }
+  .hero h1{ font-size:1.6rem; }
+  .hero p{ font-size:0.95rem; }
+  .hero-media { display:none; }
+  .card{ width:100%; }
+  .reopen-arrow{ display:block; }
 }

@@ -104,33 +104,11 @@
     </section>
 
  
-    <!-- Mesaj aç/kapa script -->
-    <script>
-        const msg = document.getElementById("school-message");
-        const closeBtn = document.getElementById("close-message");
-        const reopen = document.getElementById("reopen-arrow");
-
-        closeBtn.addEventListener("click", () => {
-            msg.style.opacity = "0";
-            msg.style.transform = "scale(0.7)";
-            setTimeout(() => {
-                msg.style.display = "none";
-                reopen.style.display = "block";
-            }, 300);
-        });
-
-        reopen.addEventListener("click", () => {
-            reopen.style.display = "none";
-            msg.style.display = "flex";
-            setTimeout(() => {
-                msg.style.opacity = "1";
-                msg.style.transform = "scale(1)";
-            }, 50);
-        });
-    </script>
+    
 
 </body>
 </html>
+
 
 
 

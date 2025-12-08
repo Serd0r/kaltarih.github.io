@@ -9,20 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));
   });
 
-  // Site info close / reopen behavior
-  const siteInfo = document.getElementById('site-info');
-  const closeSiteInfo = document.getElementById('close-site-info');
-  const reopenArrow = document.getElementById('reopen-arrow');
 
-  closeSiteInfo.addEventListener('click', () => {
-    siteInfo.style.display = 'none';
-    reopenArrow.style.display = 'block';
-  });
-
-  reopenArrow.addEventListener('click', () => {
-    siteInfo.style.display = 'flex';
-    reopenArrow.style.display = 'none';
-  });
 
   // Close mobile nav when clicking a link (better UX)
   mainNav.querySelectorAll('a').forEach(a => {
@@ -47,4 +34,5 @@ const navbar = document.getElementById('navbar');
 menuToggle.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
+
 

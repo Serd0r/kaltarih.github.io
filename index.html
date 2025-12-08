@@ -1,92 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-
-    <title>Adıyaman | Tarihi Tanıtım Sitesi</title>
-
-<meta name="description" content="Adıyaman'ın tarihi, kültürü, gezilecek yerleri ve daha fazlasını keşfetmek için hazırlanmış şehir tanıtım sitesi.">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Site Doğrulama -->
-<meta name="google-site-verification" content="MmHXo-AG41IGbmBK851sDKel6Iy675S2yUpQ8AcdX1k" />
-    <title>Adıyaman Tarihi</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adıyaman Tarihi</title>
+  <meta name="description" content="Adıyaman'ın tarihi yerleri: Nemrut Dağı, Cendere Köprüsü ve daha fazlası. Kahta Anadolu Lisesi projesi.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="4" fill="#0f2c4c"></rect>
+            <path d="M6 14 L10 9 L14 14" stroke="#f78c42" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="brand-text">Adıyaman Tarihi</span>
+        </a>
+      </div>
 
-    <!-- Kapatılabilir okul mesajı -->
-    <div class="site-info" id="school-message">
-        Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.
-        <span class="close-msg" id="close-message">&times;</span>
+      <button id="mobile-toggle" class="mobile-toggle" aria-label="Menüyü aç/kapat">☰</button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Ana navigasyon">
+        <ul>
+          <li><a href="index.html" class="active">Anasayfa</a></li>
+          <li><a href="yerler.html">Gezilecek Yerler</a></li>
+          <li><a href="proje.html">Projeler</a></li>
+          <li><a href="hikayeler.html">Hikayeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="bot.html" class="nav-cta">AI Bot</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Mesaj kapanınca görünen küçük ok -->
-    <div class="reopen-arrow" id="reopen-arrow">&#9650;</div>
-
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <h1>Adıyaman Tarihi</h1>
-            <button class="menu-toggle" id="mobile-menu">&#9776;</button>
-            <nav id="navbar">
-                <ul>
-                    <li><a href="index.html" class="active">Anasayfa</a></li>
-                    <li><a href="yerler.html">Gezilecek Yerler</a></li>
-                    <li><a href="proje.html">Projeler</a></li>
-                    <li><a href="iletisi.html">İletişim</a></li>
-                </ul>
-            </nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Adıyaman’ın Kadim Mirasını Keşfedin</h1>
+        <p>Nemrut Dağı ve Cendere Köprüsü başta olmak üzere bölgenin tarihî hazinelerini, görsellerle ve kolay rehberlikle keşfedin.</p>
+        <div class="hero-actions">
+          <a href="yerler.html" class="btn">Gezilecek Yerleri Gör</a>
+          <a href="hikayeler.html" class="btn ghost">Hikayeler</a>
         </div>
-    </header>
+      </div>
+      <figure class="hero-media" aria-hidden="true">
+        <img src="images/nemrut.jpg" alt="Nemrut Dağı" loading="lazy">
+      </figure>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Adıyaman’ın Tarihine Yolculuk</h2>
-            <p>Nemrut Dağı, Cendere Köprüsü ve çok daha fazlasını keşfedin. Binlerce yıllık tarihi güzellikleriyle Adıyaman sizi bekliyor.</p>
-            <a href="yerler.html" class="btn">Gezilecek Yerleri Gör</a>
-        </div>
-    </section>
-    
-    <!-- Featured Places -->
-    <section class="featured container">
-        <h2>Öne Çıkan Yerler</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="images/nemrut.jpg" alt="Nemrut Dağı">
-                <h3>Nemrut Dağı</h3>
-                <p>Kommagene Krallığı'nın görkemli kalıntıları, devasa heykeller ve gün doğumu manzarası.</p>
-                <a href="yerler.html#nemrut-detail" class="btn-card">Detaylar</a>
+  <!-- FEATURED -->
+  <main class="container main-grid">
+    <section class="featured">
+      <h2>Öne Çıkan Yerler</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="images/nemrut.jpg" alt="Nemrut Dağı">
+          <div class="card-body">
+            <h3>Nemrut Dağı</h3>
+            <p>Kommagene Krallığı'ndan kalan heykeller, tümülüs ve nefes kesen gün doğumu manzaraları.</p>
+            <div class="card-actions">
+              <a href="nemrut.html" class="btn-card">Detaylar</a>
             </div>
+          </div>
+        </article>
 
-            <div class="card">
-                <img src="images/cendere.jpg" alt="Cendere Köprüsü">
-                <h3>Cendere Köprüsü</h3>
-                <p>Roma döneminden kalan köprü, tarihi ve mimarisiyle ziyaretçilerini büyülüyor.</p>
-                <a href="yerler.html#cendere-detail" class="btn-card">Detaylar</a>
+        <article class="card">
+          <img src="images/cendere.jpg" alt="Cendere Köprüsü">
+          <div class="card-body">
+            <h3>Cendere Köprüsü</h3>
+            <p>Roma dönemi taş köprüsü: mimari açıdan eşsiz bir eser ve bölgenin tarihsel geçidi.</p>
+            <div class="card-actions">
+              <a href="cendere.html" class="btn-card">Detaylar</a>
             </div>
-        </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <p>&copy; 2025 Adıyaman Tarihi | Tüm Hakları Saklıdır</p>
-        </div>
-    </footer>
+    <aside class="side-panel">
+      <div class="panel-card">
+        <h4>Projelerimiz</h4>
+        <p>Yerel öğrenciler ve rehberlerle gerçekleştirilen dijital arşiv, saha çalışmaları ve interaktif içerikler.</p>
+        <a href="proje.html" class="btn small">Projeleri Gör</a>
+      </div>
+
+      <div class="panel-card">
+        <h4>Hikayeler & Kültür</h4>
+        <p>Nemrut ve Cendere hakkında anlatılar, efsaneler ve tarihi metinler.</p>
+        <a href="hikayeler.html" class="btn small ghost">Hikayeleri Oku</a>
+      </div>
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Adıyaman Tarihi • Kahta Anadolu Lisesi Projesi</p>
+      <nav class="footer-links">
+        <a href="iletisim.html">İletişim</a> · <a href="bot.html">AI Bot</a> · <a href="yerler.html">Yerler</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- HARİTA BUTONU (Sabit sağ alt) -->
+  <a class="map-btn" href="https://www.google.com/maps" target="_blank" aria-label="Google Maps'te aç">Google Maps'te Aç</a>
+
+  <!-- SABİT MESAJ -->
+  <div class="site-info" id="site-info">
+    <div class="site-info-inner">
+      <span>Bu site, Kahta Anadolu Lisesi öğrencileri tarafından yapılmıştır.</span>
+      <button id="close-site-info" class="close-site-info" aria-label="Kapat">×</button>
+    </div>
+  </div>
+
+  <!-- TEKRAR AÇMA OKU -->
+  <button class="reopen-arrow" id="reopen-arrow" aria-label="Mesajı aç">▲</button>
 
 </body>
 </html>
-
-
-
-
-
-
-
-

@@ -57,7 +57,25 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
 }
 
 /* NAVIGATION */
-.main-nav ul {
+/* NAVBAR TASARIMI */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.menu-toggle {
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #0f2c4c;
+    cursor: pointer;
+    display: none; /* Masaüstünde gizli */
+}
+
+/* NAV linkleri */
+nav ul {
     display: flex;
     gap: 15px;
     list-style: none;
@@ -65,20 +83,53 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
     padding: 0;
 }
 
-.main-nav ul li a {
-    color: var(--white);
-    background: rgba(255,255,255,0.1);
+nav ul li a {
+    color: white;
+    background: #0f2c4c;
     padding: 10px 16px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
-    display: block;
+    transition: 0.2s;
 }
 
-.main-nav ul li a:hover {
-    background: var(--orange);
-    transform: translateY(-2px);
+nav ul li a:hover {
+    background: #f78c42;
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: #0f2c4c;
+        padding: 15px 0;
+        display: none; /* kapalı */
+    }
+
+    nav.active ul {
+        display: flex; /* açıldığında aktif */
+    }
+
+    nav ul li a {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+
 }
 
 /* MOBILE TOGGLE BUTTON */
@@ -520,3 +571,4 @@ html,body{ height:100%; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verda
     padding: 16px;
   }
 }
+
